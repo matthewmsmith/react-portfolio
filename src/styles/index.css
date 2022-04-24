@@ -8,12 +8,10 @@
 
 }
 :root {
-  --color-bg: rgb(17, 17, 17);
-  --color-bg-variant: #28282B;
-  --color-primary: #FFD700;
-  --color-primary-variant: rgba(77,181,255,0.4);
-  --color-white: #fff;
-  --color-light: rgba(255,255,255,0.6);
+  --color-black: rgb(36, 36, 36);
+  --color-white: rgb(246, 246, 246);
+
+  
 
   --container-width-lg: 75%;
   --container-width-md: 86%;
@@ -31,10 +29,13 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: var(--color-bg);
-  color: var(--color-white);
-  line-height: 1.7;
-  background-image: url(../assets//backgroundImage.jpg);
+  color: var(--color-black);
+  background-image: url(../assets//background.jpg);
+
+}
+p{
+  
+  letter-spacing: .04rem
 }
 
 /************** General Styles ***************/
@@ -49,50 +50,51 @@ h1 {
   font-size: 2.5rem;
 }
 section {
-  margin-top: 8rem;
+  margin-bottom: 15rem;
+  padding: 10rem 3 0;
+
 }
 section > h2, section > h5 { 
 text-align: center;
-color: var(--color-light);
+color: var(--color-black);
+padding-top: 1rem;
 }
 section > h2 {
-  color: var(--color-primary);
-  margin-bottom: 3rem;
+  color: var(--color-white);
+  margin-bottom: 6rem;
 }
-.text__light {
-  color: var(--color-light);
-}
+
 a {
-  color: var(--color-primary);
+  color: var(--color-black);
   transition: var(--transition);
 }
 a:hover {
-  color: var(--color-white);
+  background-color: transparent;
 }
 .btn {
-  width: max-content;
-  display: inline-block;
-  color: var(--color-primary);
+  
+  color: var(--color-white);
+  background-color: var(--color-black);
   padding: 0.75rem 1.2rem;
   border-radius: 0.4rem;
   cursor: pointer;
-  border: 1px solid var(--color-primary);
-  transition: var(--transition)
+  border: none;
+  transition: var(--transition);
+
 }
 .btn:hover {
-  background: var(--color-white);
-  color: var(--color-bg);
-  border-color: transparent;
+  background: transparent;
+  color: var(--color-black);
+  border: 1px solid var(--color-white);
 }
-.btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-bg);
-}
+
 img {
   display: block;
   width: 100%;
-  object-fit: cover;
+  object-fit:cover;
+  border-radius: 1rem;
 }
+
 
 
 /********** Media queries MEDIUM devices ************/
@@ -102,8 +104,9 @@ img {
     width: var(--container-width-md);
   }
   section {
-    margin-top: 6rem;
+    margin-top: 3rem;
   }
+  
 }
 /********** Media queries SMALL devices ************/
 
